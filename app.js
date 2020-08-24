@@ -59,6 +59,8 @@ buildTeam();
 // if intern, prompt for intern questions
 // if done, render html
 // write html file
+// other things to do:
+// validate id so it is unique
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
