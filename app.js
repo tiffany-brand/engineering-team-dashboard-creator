@@ -45,9 +45,7 @@ const askForNext = () => {
 const buildTeam = () => {
 	promptUser('manager').then((emp) => {
 		const newEmp = new Manager(emp.name, emp.id, emp.email, emp.officeNumber);
-		console.log(newEmp);
 		employees.push(newEmp);
-		console.log(`Employees: ${employees}`);
 		askForNext();
 	});
 };
