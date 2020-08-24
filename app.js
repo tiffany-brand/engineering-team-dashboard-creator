@@ -21,12 +21,34 @@ const promptUser = (type) => {
 	return inquirer.prompt(questions[type]);
 };
 
+const askForNext = () => {
+	promptUser('nextEmp').then((answer) => {
+		if (answer.role === 'Engineer') {
+			promptUser('engineer').then((emp) => {
+				const newEmp = new Engineer(emp.name, emp.id, emp.email, emp.github);
+				employees.push(newEmp);
+				askForNext();
+			});
+		} else if (answer.role === 'Intern') {
+			promptUser('intern').then((emp) => {
+				const newEmp = new Intern(emp.name, emp.id, emp.email, emp.school);
+				employees.push(newEmp);
+				askForNext();
+			});
+		} else {
+			console.log('All done with new team members');
+			console.log(employees);
+		}
+	});
+};
+
 const buildTeam = () => {
 	promptUser('manager').then((emp) => {
 		const newEmp = new Manager(emp.name, emp.id, emp.email, emp.officeNumber);
 		console.log(newEmp);
 		employees.push(newEmp);
 		console.log(`Employees: ${employees}`);
+		askForNext();
 	});
 };
 
