@@ -5,6 +5,7 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 const questions = require('./lib/questions');
+const containers = require('./lib/containers');
 
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
@@ -15,6 +16,7 @@ const render = require('./lib/htmlRenderer');
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 const employees = [];
+// const ids = [];
 
 // function to prompt user - returns answers object
 const promptUser = (type) => {
@@ -27,12 +29,14 @@ const askForNext = () => {
 			promptUser('engineer').then((emp) => {
 				const newEmp = new Engineer(emp.name, emp.id, emp.email, emp.github);
 				employees.push(newEmp);
+				containers.ids.push(emp.id);
 				askForNext();
 			});
 		} else if (answer.role === 'Intern') {
 			promptUser('intern').then((emp) => {
 				const newEmp = new Intern(emp.name, emp.id, emp.email, emp.school);
 				employees.push(newEmp);
+				containers.ids.push(emp.id);
 				askForNext();
 			});
 		} else {
@@ -40,6 +44,7 @@ const askForNext = () => {
 			console.log(employees);
 			const htmlPg = render(employees);
 			console.log(htmlPg);
+
 
 		}
 	});
@@ -49,6 +54,8 @@ const buildTeam = () => {
 	return promptUser('manager').then((emp) => {
 		const newEmp = new Manager(emp.name, emp.id, emp.email, emp.officeNumber);
 		employees.push(newEmp);
+		containers.ids.push(emp.id);
+		// console.log(employees.filter((emp) => emp.getId() === "1"));
 		askForNext();
 	});
 };
