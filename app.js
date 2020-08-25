@@ -22,7 +22,7 @@ const promptUser = (type) => {
 };
 
 const askForNext = () => {
-	promptUser('nextEmp').then((answer) => {
+	return promptUser('nextEmp').then((answer) => {
 		if (answer.role === 'Engineer') {
 			promptUser('engineer').then((emp) => {
 				const newEmp = new Engineer(emp.name, emp.id, emp.email, emp.github);
@@ -38,12 +38,15 @@ const askForNext = () => {
 		} else {
 			console.log('All done with new team members');
 			console.log(employees);
+			const htmlPg = render(employees);
+			console.log(htmlPg);
+
 		}
 	});
 };
 
 const buildTeam = () => {
-	promptUser('manager').then((emp) => {
+	return promptUser('manager').then((emp) => {
 		const newEmp = new Manager(emp.name, emp.id, emp.email, emp.officeNumber);
 		employees.push(newEmp);
 		askForNext();
@@ -52,13 +55,26 @@ const buildTeam = () => {
 
 buildTeam();
 
+// const init = async () => {
+// 	try {
+// 		await buildTeam();
+// 		const htmlPg = render(employees);
+// 		console.log(htmlPg);
+// 	} catch (err) {
+// 		console.log(err);
+// 	}
+
+// }
+
+// init();
+
 // prompt for manager questions
 // push Manager onto array
 //ask for next employee
 // if engineer, prompt for engineer questions
 // if intern, prompt for intern questions
 // if done, render html
-// write html file
+// write html file - check for output folder and if no folder, create it
 // other things to do:
 // validate id so it is unique
 
