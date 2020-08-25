@@ -23,6 +23,13 @@ const promptUser = (type) => {
 	return inquirer.prompt(questions[type]);
 };
 
+const writeOutput = (page) => {
+	if (!fs.existsSync("./output")) {
+		fs.mkdirSync("./output");
+	}
+	fs.writeFileSync("./output/team.html", page);
+}
+
 const askForNext = () => {
 	return promptUser('nextEmp').then((answer) => {
 		if (answer.role === 'Engineer') {
@@ -43,6 +50,7 @@ const askForNext = () => {
 			console.log('All done with new team members');
 			console.log(employees);
 			const htmlPg = render(employees);
+			writeOutput(htmlPg);
 			console.log(htmlPg);
 
 
