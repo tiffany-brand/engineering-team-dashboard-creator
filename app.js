@@ -52,8 +52,6 @@ const askForNext = () => {
 			const htmlPg = render(employees);
 			writeOutput(htmlPg);
 			console.log(htmlPg);
-
-
 		}
 	});
 };
