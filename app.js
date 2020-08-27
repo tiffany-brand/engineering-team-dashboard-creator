@@ -12,24 +12,24 @@ const outputPath = path.join(OUTPUT_DIR, 'team.html');
 
 const render = require('./lib/htmlRenderer');
 
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
-
+// array to store employee objects as they are created
 const employees = [];
-// const ids = [];
 
 // function to prompt user - returns answers object
 const promptUser = (type) => {
 	return inquirer.prompt(questions[type]);
 };
 
+// function to write team html document in the output folder
 const writeOutput = (page) => {
-	if (!fs.existsSync("./output")) {
-		fs.mkdirSync("./output");
+	if (!fs.existsSync(OUTPUT_DIR)) {
+		fs.mkdirSync(OUTPUT_DIR);
 	}
-	fs.writeFileSync("./output/team.html", page);
+	fs.writeFileSync(outputPath, page);
+	console.log("Team file generated in output folder");
 }
 
+// function to ask user what employee to add next, and prompt to create that employee object
 const askForNext = () => {
 	return promptUser('nextEmp').then((answer) => {
 		if (answer.role === 'Engineer') {
@@ -58,6 +58,8 @@ const askForNext = () => {
 	});
 };
 
+
+// function to begin building team by asking for manager info and creating the manager object
 const buildTeam = () => {
 	return promptUser('manager').then((emp) => {
 		const newEmp = new Manager(emp.name, emp.id, emp.email, emp.officeNumber);
@@ -68,30 +70,9 @@ const buildTeam = () => {
 	});
 };
 
+// starts app
 buildTeam();
 
-// const init = async () => {
-// 	try {
-// 		await buildTeam();
-// 		const htmlPg = render(employees);
-// 		console.log(htmlPg);
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-
-// }
-
-// init();
-
-// prompt for manager questions
-// push Manager onto array
-//ask for next employee
-// if engineer, prompt for engineer questions
-// if intern, prompt for intern questions
-// if done, render html
-// write html file - check for output folder and if no folder, create it
-// other things to do:
-// validate id so it is unique
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
