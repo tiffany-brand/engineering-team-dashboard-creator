@@ -38,14 +38,20 @@ const askForNext = () => {
 				employees.push(newEmp);
 				containers.ids.push(emp.id);
 				askForNext();
-			});
+			})
+				.catch((err) => {
+					console.log(err);
+				});
 		} else if (answer.role === 'Intern') {
 			promptUser('intern').then((emp) => {
 				const newEmp = new Intern(emp.name, emp.id, emp.email, emp.school);
 				employees.push(newEmp);
 				containers.ids.push(emp.id);
 				askForNext();
-			});
+			})
+				.catch((err) => {
+					console.log(err);
+				});
 		} else {
 			console.log('Team complete - rendering team page');
 			const htmlPg = render(employees);
@@ -62,7 +68,10 @@ const buildTeam = () => {
 		employees.push(newEmp);
 		containers.ids.push(emp.id);
 		askForNext();
-	});
+	})
+		.catch((err) => {
+			console.log(err);
+		});
 };
 
 // starts the app
