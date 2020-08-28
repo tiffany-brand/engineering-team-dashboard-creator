@@ -58,6 +58,9 @@ To run tests, run the following:
 npm run test
 `
 
+![test-screenshot](https://user-images.githubusercontent.com/16748389/91604724-2e764080-e93d-11ea-83a2-818b706056c0.JPG)
+
+
 ## Questions
 
 Questions about this repository? Please contact me at [tiffanylbrand@outlook.com](mailto:tiffanylbrand@outlook.com). View more of my work in GitHub at [tiffany-brand](https://github.com/tiffany-brand) 
