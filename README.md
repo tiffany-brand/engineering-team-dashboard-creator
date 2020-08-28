@@ -10,11 +10,14 @@ This project is a command line application to build a html file displaying the m
 
 View a complete video demonstration of the application: 
 
-* Video coming soon
+![Engineering-Team-App-Demo200](https://user-images.githubusercontent.com/16748389/91603959-d7bc3700-e93b-11ea-81ff-1d0633e81101.gif)
+
+![Engineering-Team-App-Screenshot](https://user-images.githubusercontent.com/16748389/91603970-dc80eb00-e93b-11ea-8b2b-fa650344613c.JPG)
+
 
 ### Output Example team.html
 
-* Screenshot coming soon
+![team-page-screenshot](https://user-images.githubusercontent.com/16748389/91603973-de4aae80-e93b-11ea-89d9-0785843e61e7.JPG)
 
 
 ## Table of Contents
