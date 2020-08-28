@@ -6,81 +6,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My Team</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+        /* Curve Header CSS from: https://codepen.io/linux/pen/aEQKWP */
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 900px;
+        }
+
+        header {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 85% 85% / 30%;
+            margin-bottom: 30px;
+        }
+
+        header .overlay {
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            color: #FFF;
+            text-shadow: 1px 1px 1px #333;
+            background-image: linear-gradient(135deg, #7bdfcf 10%, #f5b27a 100%);
+
+        }
+
+        h1 {
+            font-family: "Russo One", sans-serif;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .collection-item {
+            font-size: .9rem;
+            overflow-wrap: break-word;
+        }
+
+        .card {
+            height: 500px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center">My Team</h1>
-            </div>
+    <header>
+        <div class="overlay">
+            <h1>My Team</h1>
         </div>
-    </div>
+    </header>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
-                <div class="card employee-card">
-                    <div class="card-header">
-                        <h2 class="card-title">Carol</h2>
-                        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">ID: 123</li>
-                            <li class="list-group-item">Email: <a href="mailto:carol@someco.com">carol@someco.com</a>
-                            </li>
-                            <li class="list-group-item">Office number: 896</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card employee-card">
-                    <div class="card-header">
-                        <h2 class="card-title">Bob</h2>
-                        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">ID: 333</li>
-                            <li class="list-group-item">Email: <a href="mailto:bob@someco.com">bob@someco.com</a></li>
-                            <li class="list-group-item">GitHub: <a href="https://github.com/bob-robertson"
-                                    target="_blank" rel="noopener noreferrer">bob-robertson</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card employee-card">
-                    <div class="card-header">
-                        <h2 class="card-title">Marcus</h2>
-                        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">ID: 889</li>
-                            <li class="list-group-item">Email: <a href="mailto:marcus@someco.com">marcus@someco.com</a>
-                            </li>
-                            <li class="list-group-item">GitHub: <a href="https://github.com/marcus-ppo" target="_blank"
-                                    rel="noopener noreferrer">marcus-ppo</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card employee-card">
-                    <div class="card-header">
-                        <h2 class="card-title">Rachel</h2>
-                        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">ID: 123444</li>
-                            <li class="list-group-item">Email: <a href="mailto:rachel@unh.edu">rachel@unh.edu</a></li>
-                            <li class="list-group-item">School: UNH</li>
-                        </ul>
-                    </div>
-                </div>
 
-            </div>
+            <div class="col s12 m6 l4">
+    <div class="card hoverable teal lighten-5">
+        <div class="card-content center-align">
+            <h2>Matthew DeClairmont</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+        </div>
+        <div class="card-action">
+            <ul class="collection">
+                <li class="collection-item">ID: 8765</li>
+                <li class="collection-item">Email: <a href="mailto:joe@joe.com">mdeclairmont@oxfordlabs.com</a></li>
+                <li class="collection-item">Office Number: 87</li>
+            </ul>
+        </div>
+    </div>
+</div><div class="col s12 m6 l4">
+    <div class="card hoverable teal lighten-5">
+        <div class="card-content center-align">
+            <h2>Marcus Whitmore</h2>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Engineer</h3>
+        </div>
+        <div class="card-action">
+            <ul class="collection">
+                <li class="collection-item">ID: 77432</li>
+                <li class="collection-item">Email: <a href="mailto:marcusw@oxfordlabs.com">marcusw@oxfordlabs.com</a></li>
+                <li class="collection-item">GitHub: <a href="https://github.com/marcus-whitmore" target="_blank"
+                        rel="noopener noreferrer">marcus-whitmore</a></li>
+            </ul>
+        </div>
+    </div>
+</div><div class="col s12 m6 l4">
+    <div class="card hoverable teal lighten-5">
+        <div class="card-content center-align">
+            <h2>Jane Bretford</h2>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Engineer</h3>
+        </div>
+        <div class="card-action">
+            <ul class="collection">
+                <li class="collection-item">ID: 1256</li>
+                <li class="collection-item">Email: <a href="mailto:jbretford@oxfordlabs.com">jbretford@oxfordlabs.com</a></li>
+                <li class="collection-item">GitHub: <a href="https://github.com/jbret" target="_blank"
+                        rel="noopener noreferrer">jbret</a></li>
+            </ul>
+        </div>
+    </div>
+</div><div class="col s12 m6 l4">
+    <div class="card hoverable teal lighten-5">
+        <div class="card-content center-align">
+            <h2>Diana Bishop</h2>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+        </div>
+        <div class="card-action">
+            <ul class="collection">
+                <li class="collection-item">ID: 123</li>
+                <li class="collection-item">Email: <a href="mailto:diana@castle.edu">diana@castle.edu</a></li>
+                <li class="collection-item">School: Castle University</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
         </div>
     </div>
 </body>
