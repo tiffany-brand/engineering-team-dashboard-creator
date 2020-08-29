@@ -4,11 +4,11 @@
 
 ## Description
 
-This project is a command line application to build a html file displaying the members of an engineering team. The application prompts the user for informaton about the team manager, and then prompts to add engineer or intern team members. When all team members have been added, the application generates a team.html file which will display all team members summaries on one page.
+This project is a command line application which builds an html file displaying the members of an engineering team. The application prompts the user for informaton about the team manager, and then prompts to add engineer or intern team members. When all team members have been added, the application generates a team.html file in the output folder which displays all team member summaries on one page.
 
 ### Demonstration
 
-View a complete video demonstration of the application: 
+View a complete video demonstration of the application: [Engineering Team Creator Demo](https://youtu.be/hcB0bCFOYgo)
 
 ![Engineering-Team-App-Demo200](https://user-images.githubusercontent.com/16748389/91603959-d7bc3700-e93b-11ea-81ff-1d0633e81101.gif)
 
@@ -17,7 +17,8 @@ View a complete video demonstration of the application:
 
 ### Output Example team.html
 
-![team-page-screenshot](https://user-images.githubusercontent.com/16748389/91603973-de4aae80-e93b-11ea-89d9-0785843e61e7.JPG)
+![scooby-team](https://user-images.githubusercontent.com/16748389/91646786-d31d7e80-ea20-11ea-8752-64883e13a16d.JPG)
+
 
 
 ## Table of Contents
@@ -42,7 +43,7 @@ npm i
 After downloading the files and installing dependencies, run 
 
 `
-node app.js.
+node app.js
 `
 
 ## License
