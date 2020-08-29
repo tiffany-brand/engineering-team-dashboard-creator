@@ -24,11 +24,17 @@ View a complete video demonstration of the application: [Engineering Team Dashbo
 ## Table of Contents
 
 * [Description](#description)
+* [Technologies](#technologies)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Tests](#tests)
 * [Questions](#questions)
+
+## Technologies
+
+* [Node.js](https://nodejs.org/)
+* [Inquirer.js](https://www.npmjs.com/package/inquirer)
 
 ## Installation
 
