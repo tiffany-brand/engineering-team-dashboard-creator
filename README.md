@@ -8,7 +8,7 @@ This project is a command line application which builds an html file displaying 
 
 ### Demonstration
 
-View a complete video demonstration of the application: [Engineering Team Creator Demo](https://youtu.be/hcB0bCFOYgo)
+View a complete video demonstration of the application: [Engineering Team Dashboard Creator Demo](https://youtu.be/hcB0bCFOYgo)
 
 ![Engineering-Team-App-Demo200](https://user-images.githubusercontent.com/16748389/91603959-d7bc3700-e93b-11ea-81ff-1d0633e81101.gif)
 
