@@ -6,7 +6,20 @@
 
 This project is a command line application which builds an html file displaying the members of an engineering team. The application prompts the user for informaton about the team manager, and then prompts to add engineer or intern team members. When all team members have been added, the application generates a team.html file in the output folder which displays all team member summaries on one page.
 
-### Demonstration
+
+## Table of Contents
+
+* [Description](#description)
+* [Demonstration](#demonstration)
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Tests](#tests)
+* [Questions](#questions)
+
+
+## Demonstration
 
 View a complete video demonstration of the application: [Engineering Team Dashboard Creator Demo](https://youtu.be/hcB0bCFOYgo)
 
@@ -19,17 +32,6 @@ View a complete video demonstration of the application: [Engineering Team Dashbo
 
 ![scooby-team](https://user-images.githubusercontent.com/16748389/91646786-d31d7e80-ea20-11ea-8752-64883e13a16d.JPG)
 
-
-
-## Table of Contents
-
-* [Description](#description)
-* [Technologies](#technologies)
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Tests](#tests)
-* [Questions](#questions)
 
 ## Technologies
 
